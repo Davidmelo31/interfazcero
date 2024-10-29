@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        /* Estilos del contenedor superior */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b7e4c7; /* Verde pastel */
+            padding: 15px;
+        }
+
+        /* Estilo para los logos */
+        .logo-container img {
+            width: 70px; /* Tamaño de logos */
+            margin-right: 10px;
+        }
+
+        /* Estilo para el contacto */
+        .contact-info {
+            text-align: right;
+            font-size: 16px;
+        }
+
+        /* Estilos del formulario */
+        .login-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .login-container h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .login-form input {
+            width: 60%; /* Más corto */
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 65%;
+            padding: 12px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff; /* Color del botón */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-form .forgot-password {
+            display: block;
+            color: #007bff; /* Azul */
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        .login-form .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección superior con logos y contacto -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="imagenes/logocesmag.png" alt="Logo 1">
+            <img src="imagenes/logohambrecero.png" alt="Logo 2">
+        </div>
+        <div class="contact-info">
+            <p>323558423</p>
+            <p>cesmag.edu</p>
+        </div>
+    </div>
+
+    <!-- Sección de inicio de sesión -->
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form class="login-form">
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>
+            <button type="submit">Iniciar</button>
+        </form>
+    </div>
+
+</body>
+</html>

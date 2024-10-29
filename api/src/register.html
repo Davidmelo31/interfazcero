@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Hambre Cero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Pacifico&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f4f8;
+        }
+        /* Encabezado con fondo verde pastel */
+        header {
+            background-color: #c8e6c9; /* Verde pastel */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            width: 80px; /* Tamaño de los logos */
+            height: 80px;
+            margin-right: 15px;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 1.2em;
+        }
+        /* Título de Registro */
+        h1 {
+            font-size: 3em;
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            color: #4caf50; /* Verde */
+            margin-top: 20px;
+        }
+        /* Estilos del formulario */
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Opciones condicionales */
+        .extra-fields {
+            display: none;
+            margin-top: 10px;
+        }
+        /* Botón de registro */
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #4caf50; /* Verde */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #388e3c; /* Verde oscuro */
+        }
+    </style>
+    <script>
+        function toggleFields() {
+            const userType = document.getElementById('userType').value;
+            const extraFields = document.querySelectorAll('.extra-fields');
+
+            // Mostrar o ocultar campos según el tipo de usuario seleccionado
+            extraFields.forEach(field => field.style.display = 'none');
+            if (userType === 'emprendedor') {
+                document.getElementById('empresaFields').style.display = 'block';
+            } else if (userType === 'ordinario') {
+                document.getElementById('ordinarioFields').style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <!-- Logos a la izquierda -->
+    <div>
+        <img src="imagenes/logocesmag.png" alt="Logo CESMAG" class="logo">
+        <img src="imagenes/logohambrecero.png" alt="Logo Hambre Cero" class="logo">
+    </div>
+    <!-- Información de contacto a la derecha -->
+    <div class="contact-info">
+        <div>3235548423</div>
+        <div>cesmag.edu.co</div>
+    </div>
+</header>
+
+<h1>Registro</h1>
+
+<div class="form-container">
+    <div class="form-group">
+        <label for="username">Nombre de Usuario</label>
+        <input type="text" id="username" placeholder="Ingresa tu nombre de usuario">
+    </div>
+    <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" placeholder="Ingresa tu correo electrónico">
+    </div>
+    <div class="form-group">
+        <label for="userType">Tipo de Usuario</label>
+        <select id="userType" onchange="toggleFields()">
+            <option value="">Selecciona una opción</option>
+            <option value="emprendedor">Usuario Emprendedor</option>
+            <option value="ordinario">Usuario Ordinario</option>
+        </select>
+    </div>
+    <!-- Campos adicionales para Usuario Emprendedor -->
+    <div id="empresaFields" class="extra-fields">
+        <div class="form-group">
+            <label for="companyName">Nombre de Empresa</label>
+            <input type="text" id="companyName" placeholder="Ingresa el nombre de tu empresa">
+        </div>
+        <div class="form-group">
+            <label for="passwordEmp">Contraseña</label>
+            <input type="password" id="passwordEmp" placeholder="Crea una contraseña">
+        </div>
+        <div class="form-group">
+            <label for="productType">Tipo de Producto</label>
+            <input type="text" id="productType" placeholder="Ingresa el tipo de producto">
+        </div>
+    </div>
+    <!-- Campos adicionales para Usuario Ordinario -->
+    <div id="ordinarioFields" class="extra-fields">
+        <div class="form-group">
+            <label for="passwordOrd">Contraseña</label>
+            <input type="password" id="passwordOrd" placeholder="Crea una contraseña">
+        </div>
+    </div>
+    <button type="submit">Registrarse</button>
+</div>
+
+</body>
+</html>

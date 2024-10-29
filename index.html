@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambre Cero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Pacifico&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+            background-color: #e8f5e9;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+        }
+        .logo {
+            width: 80px; /* Tamaño reducido de los logos */
+            height: 80px;
+            margin-left: 15px;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 5em;
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding-right: 10px;
+            background: linear-gradient(90deg, #ff0080, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+        }
+        .subtitle {
+            font-size: 3.5em; /* Tamaño aumentado para #Cero */
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(90deg, #ff0080, #00bfff); /* Mismo degradado que "Hambre" */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+        }
+        .flag-container {
+            display: flex;
+            margin-left: 10px; /* Espacio entre #Cero y la bandera */
+        }
+        .flag-color {
+            width: 20px;
+            height: 15px;
+        }
+        .flag-yellow { background-color: #FFD700; } /* Amarillo */
+        .flag-blue { background-color: #0033A0; }   /* Azul */
+        .flag-red { background-color: #CE1126; }    /* Rojo */
+        .content {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px;
+            padding-left: 20px;
+        }
+        textarea {
+            padding: 10px;
+            font-size: 1.5em;
+            margin-right: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 400px;
+            height: 150px;
+            background-color: #fff;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: auto;
+        }
+        button {
+            padding: 20px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #ff0080, #00bfff);
+            color: white;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(45deg, #00bfff, #ff0080);
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 10px;
+            margin-right: 20px;
+        }
+        footer div {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <img src="imagenes/logocesmag.png" alt="Logo 1" class="logo">
+        <img src="imagenes/logohambrecero.png" alt="Logo 2" class="logo">
+    </div>
+</header>
+
+<div class="title-container">
+    <h1>Hambre</h1>
+    <div class="subtitle">
+        #Cero
+        <div class="flag-container">
+            <div class="flag-color flag-yellow"></div>
+            <div class="flag-color flag-blue"></div>
+            <div class="flag-color flag-red"></div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <textarea placeholder="Nosotros estamos aquí para ayudarte sobre el desperdicio de alimentos y te vamos a ayudar a cómo evitarlo y hacer que los productos duren más."></textarea>
+    <div class="button-container">
+        <button>Registro</button>
+        <button>Iniciar Sesión</button>
+    </div>
+</div>
+
+<footer>
+    <div>3235548423</div>
+    <div>unicesmgas.edu.co</div>
+    <button>Saber Más</button>
+</footer>
+
+</body>
+</html>
