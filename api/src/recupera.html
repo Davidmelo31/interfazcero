@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #b0eac8; /* Fondo verde pastel */
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .logos {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .logos img {
+            max-width: 80px;
+            height: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .support-btn {
+            margin-top: 20px;
+            background-color: #28a745;
+        }
+        .support-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logos">
+            <img src="imagenes/logocesmag.png" alt="Logo 1">
+            <img src="imagenes/logohambrecero.png" alt="Logo 2">
+        </div>
+        <h2>Recuperar Contraseña</h2>
+        <form>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="text" placeholder="Nombre" required>
+            <input type="tel" placeholder="Número de celular" required>
+            <button type="submit">Recuperar</button>
+        </form>
+        <button class="support-btn">Soporte</button>
+    </div>
+</body>
+</html>
